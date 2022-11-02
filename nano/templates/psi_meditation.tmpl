@@ -1,0 +1,55 @@
+{{if data.screen == "meditation"}}
+	<div class='item'>
+
+	<table class="fixed" style="width: 100%">
+	  <tr>
+		<td valign="top">
+			<div id='sciTechTreeContainer'>
+				{{for data.lines}}
+					<div style="position: absolute;border-{{:value.istop?'top':'bottom'}}: 1px solid white;border-{{:value.isright?'right':'left'}}: 1px solid white;width: {{:value.width}}%;height: {{:value.height}}%;left: {{:value.line_x}}%;bottom: {{:value.line_y}}%"></div>
+				{{/for}}
+
+				{{for data.techs}}
+					<div style="position: absolute; left: {{:value.x}}%; bottom: {{:value.y}}%;margin-left: -20px;margin-bottom: -20px;">
+						{{:helper.link("<div class='sciTechTreeIcon icon-"+value.icon+"'><span><img align='center' class='sciTechTreeIconToolTip icon-"+value.icon+"'><br><b>"+value.name+"</b><hr>"+value.description+"</span></div>", '', {'select_technology' : value.id}, null, "link sciTechTreeIconBox "+" "+((value.canresearch==0 && value.isresearched!=1)?'sciTechCantResearch':'')+" "+((value.isresearched==1)?'sciTechResearched':'')+" "+((value.id == data.selected_technology_id)?'sciTechSelected':'') )}}
+					</div>
+				{{/for}}
+			</div>
+		</td>
+			<td style="width: 200px" valign="top">
+				{{if data.selected_technology}}
+					<b>Name</b><br>
+					{{:data.selected_technology.name}}
+					<br><br>
+					<b>Description</b><br>
+					{{:data.selected_technology.desc}}
+					<br><br>
+					{{if data.selected_technology.cost}}
+						<b>Cost</b></br>
+						{{:data.selected_technology.cost}} Research Points
+						</br></br>
+					{{/if}}
+					{{if data.selected_technology.requirements.length}}
+						<b>Requirements</b></br>
+						{{for data.selected_technology.requirements}}
+							<span style="color: {{:value.isgood?'#00FF00':'#FF0000'}}">{{:value.text}}</span></br>
+						{{/for}}
+						</br>
+					{{/if}}
+					<b>Unlocks</b></br>
+					{{for data.selected_technology.unlocks}}
+						- {{:value.text}} ({{:value.build_types}})</br>
+					{{/for}}
+					</br>
+					{{if data.selected_technology.isresearched}}
+						<span class="average">Researched</span>
+					{{else}}
+						{{:helper.link("Research", '', {'unlock_technology' : data.selected_technology.id})}}
+					{{/if}}
+				{{else}}
+					{{:data.tech_tree_desc}}
+				{{/if}}
+			</td>
+	  </tr>
+	</table>
+{{/if}}
