@@ -37,6 +37,15 @@
 		list(QUALITY_HAMMERING, 10, "time" = 30)
 	)
 
+/datum/craft_recipe/gun/stripper3
+	name = "handmade 8.6mm heavy rifle stripper clip"
+	result = /obj/item/ammo_magazine/speed_loader_heavy_rifle_408/empty
+	steps = list(
+		list(CRAFT_MATERIAL, 1, MATERIAL_STEEL, "time" = 30),
+		list(QUALITY_SAWING, 10, "time" = 30),
+		list(QUALITY_HAMMERING, 10, "time" = 30)
+	)
+
 /datum/craft_recipe/gun/arrows
 	name = "crude arrows"
 	result = /obj/item/ammo_casing/arrow/bulk
@@ -176,7 +185,7 @@
 	name = "\"STS\" battle rifle"
 	result = /obj/item/gun/projectile/automatic/sts/rifle
 	steps = list(
-		list(/obj/item/gun/projectile/automatic/sts/lrifle, 1, "time" = 60),
+		list(/obj/item/gun/projectile/automatic/sts/carbine, 1, "time" = 60),
 		list(QUALITY_SCREW_DRIVING, 10, "time" = 10),
 		list(CRAFT_MATERIAL, 5, MATERIAL_STEEL),
 		list(QUALITY_WELDING, 10, "time" = 30),

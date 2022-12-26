@@ -269,6 +269,7 @@ obj/item/storage/hcases/attackby(obj/item/W, mob/user)
 	max_storage_space = DEFAULT_SMALL_STORAGE * 1.3 //a better fancy box
 
 /obj/item/storage/hcases/ammo/scrap/outsider
+	desc = "A harcase containing what little you could scavenge for your own survival. Can hold ammo magazines, boxes, and bullets. Alt+click to open and close."
 	exspand_when_spawned = FALSE //No exspanding cheats
 
 /obj/item/storage/hcases/ammo/scrap/outsider/populate_contents()
@@ -384,6 +385,27 @@ obj/item/storage/hcases/attackby(obj/item/W, mob/user)
 	//Has medicals items inside it to save on spawn storage.
 	new /obj/item/storage/firstaid/soteria(src)
 	new /obj/item/modular_computer/tablet/moebius/preset(src)
+
+
+/obj/item/storage/hcases/med/medical_job_psyco
+	exspand_when_spawned = FALSE //No exspanding cheats
+
+/obj/item/storage/hcases/med/medical_job_psyco/populate_contents()
+	new /obj/item/stack/medical/advanced/bruise_pack/large(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment/large(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_containers/syringe/inaprovaline(src)
+	new /obj/item/device/scanner/health(src)
+	//Has medicals items inside it to save on spawn storage.
+	new /obj/item/storage/firstaid/soteria(src)
+	new /obj/item/storage/pill_bottle/njoy/red(src)
+	new /obj/item/storage/pill_bottle/njoy/blue(src)
+	new /obj/item/storage/pill_bottle/njoy/green(src)
+	new /obj/item/modular_computer/tablet/moebius/preset(src)
+
 
 /obj/item/storage/hcases/med/medical_job_cbo
 	exspand_when_spawned = FALSE //No exspanding cheats

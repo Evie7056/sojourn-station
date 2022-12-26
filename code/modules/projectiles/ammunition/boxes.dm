@@ -376,49 +376,6 @@
 	ammo_type = /obj/item/ammo_casing/c10x24
 	max_ammo = 80 //6.6 reloads of the SWAT, 2 of the bond, almost 1 full pulse mag
 
-//// .223 laser shot!
-
-/obj/item/ammo_magazine/ammobox/laser_223
-	name = "ammunition packet (5.56mm L)"
-	icon_state = "223-laser"
-	desc = "A packet of 5.56mm laser round."
-	matter = list(MATERIAL_CARDBOARD = 1)
-	caliber = CAL_SCI
-	ammo_type = /obj/item/ammo_casing/beam
-	max_ammo = 30
-
-/obj/item/ammo_magazine/ammobox/laser_223/ap
-	name = "ammunition packet (5.56mm PL)"
-	icon_state = "223-ap-laser"
-	ammo_type = /obj/item/ammo_casing/beam/ap
-
-/obj/item/ammo_magazine/ammobox/laser_223/lethal
-	name = "ammunition packet (5.56mm DL)"
-	icon_state = "223-lethal-laser"
-	ammo_type = /obj/item/ammo_casing/beam
-
-/obj/item/ammo_magazine/ammobox/laser_223/box
-	name = "ammunition box (5.56mm L)"
-	icon_state = "box223-laser"
-	desc = "A large box of 5.56mm laser round."
-	matter = list(MATERIAL_CARDBOARD = 1)
-	caliber = CAL_SCI
-	ammo_type = /obj/item/ammo_casing/beam
-	max_ammo = 200
-	w_class = ITEM_SIZE_BULKY
-
-/obj/item/ammo_magazine/ammobox/laser_223/ap/box
-	name = "ammunition box (5.56mm PL)"
-	icon_state = "box223-ap-laser"
-	ammo_type = /obj/item/ammo_casing/beam/ap
-	max_ammo = 200
-
-/obj/item/ammo_magazine/ammobox/laser_223/lethal/box
-	name = "ammunition box (5.56mm DL)"
-	icon_state = "box223-lethal-laser"
-	ammo_type = /obj/item/ammo_casing/beam
-	max_ammo = 200
-
 //// 12mm heavy pistol
 
 /obj/item/ammo_magazine/ammobox/kurtz_50
@@ -677,17 +634,17 @@
 
 /obj/item/ammo_magazine/ammobox/shotgun/ceramic
 	name = "ammunition packet (20mm Ceramic)"
-	icon_state = "slug"
+	icon_state = "ceramic"
 	ammo_type = /obj/item/ammo_casing/shotgun/ceramic
 
 /obj/item/ammo_magazine/ammobox/shotgun/blanks
 	name = "ammunition packet (20mm Blank)"
-	icon_state = "slug"
+	icon_state = "practice"
 	ammo_type = /obj/item/ammo_casing/shotgun/blank
 
 /obj/item/ammo_magazine/ammobox/shotgun/practiceshells
 	name = "ammunition packet (20mm Practice Shells)"
-	icon_state = "slug"
+	icon_state = "practice"
 	ammo_type = /obj/item/ammo_casing/shotgun/practice
 
 /obj/item/ammo_magazine/ammobox/shotgun/beanbags
@@ -703,7 +660,7 @@
 //used in mapping only cases
 /obj/item/ammo_magazine/ammobox/shotgun/flashshells
 	name = "signaling ammunition packet (20mm Illumination)"
-	icon_state = "stunslug"
+	icon_state = "illum"
 	matter = list(MATERIAL_CARDBOARD = 2)
 	w_class = ITEM_SIZE_BULKY
 	ammo_type = /obj/item/ammo_casing/shotgun/illumination
@@ -711,7 +668,7 @@
 
 /obj/item/ammo_magazine/ammobox/shotgun/flash
 	name = "ammunition packet (20mm Illumination)"
-	icon_state = "stunslug"
+	icon_state = "illum"
 	ammo_type = /obj/item/ammo_casing/shotgun/illumination
 
 /obj/item/ammo_magazine/ammobox/shotgun/stunshells
@@ -726,12 +683,12 @@
 
 /obj/item/ammo_magazine/ammobox/shotgun/incendiary
 	name = "ammunition packet (20mm Incendiary)"
-	icon_state = "explosive"
+	icon_state = "incendiary"
 	ammo_type = /obj/item/ammo_casing/shotgun/incendiary
 
 /obj/item/ammo_magazine/ammobox/shotgun/scrap_beanbag
 	name = "old ammunition packet (20mm Beanbag)"
-	icon_state = "shot_scrap"
+	icon_state = "shot_rs"
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag/scrap
 
 /obj/item/ammo_magazine/ammobox/shotgun/scrap_pellet
@@ -741,6 +698,6 @@
 
 /obj/item/ammo_magazine/ammobox/shotgun/scrap_slug
 	name = "old ammunition packet (20mm Slug)"
-	icon_state = "shot_scrap"
+	icon_state = "shot_ss"
 	ammo_type = /obj/item/ammo_casing/shotgun/scrap
 

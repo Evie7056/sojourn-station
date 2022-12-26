@@ -90,7 +90,7 @@
 /obj/random/gun_combat/item_to_spawn()
 	return pickweight(list(/obj/item/gun/projectile/automatic/texan = 1,\
 				/obj/item/gun/projectile/automatic/greasegun = 1,\
-				/obj/item/gun/projectile/automatic/sts/lrifle/sawn = 1,\
+				/obj/item/gun/projectile/automatic/sts/sawn/true = 1,\
 				/obj/item/ammo_kit = 0.8,
 				/obj/item/gun/projectile/automatic/sts/rifle/sawn = 1,\
 				/obj/item/gun/projectile/automatic/omnirifle/solmarine = 1,\
@@ -166,7 +166,9 @@
 				/obj/item/gun/projectile/boltgun/handmade = 1,\
 				/obj/item/gun/projectile/shotgun/slidebarrel = 1,\
 				/obj/item/gun/energy/laser/makeshift = 1,\
-				/obj/item/gun/energy/lasersmg = 1))
+				/obj/item/gun/energy/lasersmg = 1,\
+				/obj/item/gun/projectile/automatic/ak47/makeshift = 1,\
+				/obj/item/gun/projectile/automatic/luty = 1))
 
 /obj/random/gun_handmade/willspawn
 	name = "will spawn random handmade gun weapon"

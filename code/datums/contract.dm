@@ -1,4 +1,4 @@
-GLOBAL_LIST_EMPTY(various_antag_contracts)	//Contracts from "Various" emloyers, currently used by Traitors, Changelings and Blitzshells
+GLOBAL_LIST_EMPTY(various_antag_contracts)	//Contracts from "Various" emloyers, currently used by contractors, Changelings and Blitzshells
 GLOBAL_LIST_EMPTY(excel_antag_contracts)	//Excelsior contracts
 GLOBAL_LIST_EMPTY(blackshield_antag_contracts)	//Excelsior contracts
 GLOBAL_LIST_INIT(antag_item_targets,list(
@@ -31,7 +31,7 @@ GLOBAL_LIST_INIT(excel_item_targets,list(
 		"a Spider Rose energy gun" = /obj/item/gun/energy/gun,
 		"a Omnirfile heavy rifle" = /obj/item/gun/projectile/automatic/omnirifle,
 		//"a MAC sub machine gun" = /obj/item/gun/projectile/automatic/mac,
-		"a STS carbine" = /obj/item/gun/projectile/automatic/sts,
+		"a STS carbine" = /obj/item/gun/projectile/automatic/sts/carbine,
 		"a Colt handgun" = /obj/item/gun/projectile/colt,
 		//"a Lenar granade launcher" = /datum/design/autolathe/gun/grenade_launcher_lenar, What in the god damn?
 		"a RCD" = /obj/item/rcd,
@@ -173,7 +173,7 @@ GLOBAL_LIST_INIT(blackshield_item_targets,list(
 		candidates -= candidate_mind
 
 		// Implant contracts are 75% less likely to target contract-based antags to reduce the amount of cheesy self-implants
-		if((player_is_antag_id(candidate_mind, ROLE_TRAITOR) || player_is_antag_id(candidate_mind, ROLE_CARRION)) && prob(75))
+		if((player_is_antag_id(candidate_mind, ROLE_CONTRACTOR) || player_is_antag_id(candidate_mind, ROLE_CARRION)) && prob(75))
 			continue
 
 		// No check for cruciform because the spying implant can bypass it

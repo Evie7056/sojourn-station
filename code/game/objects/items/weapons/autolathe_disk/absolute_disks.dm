@@ -518,6 +518,7 @@ obj/item/computer_hardware/hard_drive/portable/design/nt/concillium
 		/datum/design/autolathe/sword/nt_spear,
 		/datum/design/autolathe/sword/nt_warhammer,
 		/datum/design/autolathe/sword/nt_flanged,
+		/datum/design/autolathe/sword/nt_power,
 		/datum/design/autolathe/nt/shield/nt_buckler,
 		/datum/design/autolathe/shield/nt_shield,
 		/datum/design/autolathe/gun/plasma/martyr,
@@ -544,6 +545,8 @@ obj/item/computer_hardware/hard_drive/portable/design/nt/concillium
 		/datum/design/bioprinter/pouch/ammo,
 		/datum/design/bioprinter/pouch/baton_holster,
 		/datum/design/bioprinter/pouch/pistol_holster,
+		/datum/design/bioprinter/pouch/pistol_double,
+		/datum/design/bioprinter/pouch/kniferig,
 		//mods
 		/datum/design/autolathe/tool_upgrade/sanctifier,
 		/datum/design/autolathe/gun_upgrade/barrel/excruciator,
